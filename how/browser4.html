@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>実際にブラウザを表示する</title>
+    <link rel="stylesheet" type="text/css" href="browser3.css">
+</head>
+<body>
+   <header>
+      <ul>
+  
+          <li><a href="./goal.html" class="btn2">1章</a></li>
+          <li><a href="./opensource.html" class="btn4">2章</a></li>
+          <li><a href="./lang.html" class="btn4">3章</a></li>
+          <li><a href="browser4.html" class="btn4">４章</a></li>
+          <li><a href="./summary.html" class="btn4">5章</a></li>
+          <li><a href="./summary.html" class="btn4">6章</a></li>
+      </ul>
+  </header>
+
+    <h1 class="title">自作ブラウザの表示</h1>
+
+     <div class="hako">
+      <h2>1 ソースコード</h2>
+      <p>今回vs codeで実際に書いていくコードです。名前はbrowser.pyで作成します。</p>
+       <img src="screen.png">
+     </div>
+
+     <div class="hako">
+       <h2>2 importとfrom import</h2>
+       <p>importはモジュールを使う際に必要な宣言です。<br>
+         （モジュールとは.pyの拡張子で終わるpythonファイルを指す。）<br>
+          importの種類は合計で3種類あります。<br>
+         <div class="hako2"> import A (モジュールAに定義されているすべての関数を読み込む)<br>
+            import A as B (モジュールAをBとして読み込む（省略して宣言することが多い）)<br>
+            from A import B (モジュールAの中にある関数やクラスBを読み込む)</div></p>
+            <p>今回のソースコードでは import ~ と from ~ importを使用します。<br>
+               一番上のコードを例に出すと、sysで定義されている機能を使います!っていう感じです。
+           </p>
+          <img src="screen2.png">
+
+
+     </div>
+
+     <div class="hako">
+        <h2>3 アプリケーションの起動</h2>
+        <p>初めに my app = で自分で作成するアプリを定義します。<br>
+           次に initurl = で起動時に開くURLを記述します。<br>
+           （ここで記述するURLはGoogle でも safariでもegde でもなんでもいい。）</p>
+        <img src="screen3.png">
+     </div>
+     
+     <div class="hako">
+        <h2>4 ブラウザの設定</h2>
+        <p>起動するブラウザの設定をやっていきます。<br>
+            browser = でブラウザを作成し、browser.load(QUrl(initurl))で作成したブラウザに表示するURLを設定します。<br>
+            次にbrowser.resizeで表示するブラウザの初期サイズを設定します。<br>
+            最後にbrowser.moveでブラウザの初期表示位置を設定します。（今回だと下に100,右に100の位置に表示します。）</p>
+        <img src="screen4.png">
+     </div>
+
+     <div class="hako">
+        <h2>5 ブラウザの表示と設定</h2>
+        <p>browser.show()でブラウザを実際に表示させます。<br>
+           最後にユーザがブラウザを閉じるとsys.exit(my_app.exec_())でブラウザが終了します。</p>
+        <img src="screen5.png">
+     </div>
+    
+     <div class="hako">
+        <h2>6 実行</h2>
+        <p>それでは実際に実行して表示されるか確認してみましょう。<br>
+           画面右上の実行ボタンをクリックします。</p>
+        <img src="screen6.png">
+        <p>うまく成功すれば以下のようにブラウザが表示されているはずです。</p>
+        <img src="screen7.png">
+     </div>
+     
+      <p class="footer">次の章ではブラウザの戻るボタンやURLなどのカスタマイズを行っていきます。
+      </p>
+
+</body>
+</html>
